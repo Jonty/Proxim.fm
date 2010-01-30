@@ -20,14 +20,15 @@ while True:
 
     # Find discoverable devices
     for dev in devices:
-        m = re.search('^lfm-([^\s]+)', dev[1])
-        if m:
-            user = m.group(1)
-            userInfo = (dev[0], user)
-            if userInfo not in users:
-                print '%s just walked in the door' % user
-                users.append(userInfo)
-                retune = True
+        if dev[0] and dev[1]:
+            m = re.search('^lfm-([^\s]+)', dev[1])
+            if m:
+                user = m.group(1)
+                userInfo = (dev[0], user)
+                if userInfo not in users:
+                    print '%s just walked in the door' % user
+                    users.append(userInfo)
+                    retune = True
 
     # Find devices we know the mac of
     for user in macMap.items():
