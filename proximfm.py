@@ -1,5 +1,5 @@
 #!/usr/bin/python
-import lightblue, re, base64, os, fileinput
+import lightblue, re, base64, os, fileinput, webbrowser
 
 print "Running proxim.fm, looking for users..."
 
@@ -65,5 +65,4 @@ while True:
         if userString:
             print 'Starting radio station: %s' % userString
             url = 'lastfm://rql/%s' % base64.standard_b64encode(userString)
-            os.popen('lastfm %s' % url)
-
+            webbrowser.open(url)
