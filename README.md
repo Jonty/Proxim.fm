@@ -12,6 +12,9 @@ It _should_ be cross platform, but it's only tested on Linux. Good luck and god 
 Notes
 -----
 
+It depends on Lightblue, a cross-platform bluetooth module for python.
+(http://lightblue.sourceforge.net/)
+
 Proxim.fm looks for devices with their name set to something like "lfm-USERNAME", so
 set your device name to that if you want to hear your tunes.
 
