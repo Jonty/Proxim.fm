@@ -7,7 +7,7 @@ print "Running proxim.fm, looking for users..."
 # Load the static mac map
 macMap = {}
 for line in fileinput.input('macmap.txt'):
-    m = re.search('((?:\d\d:?){,6})\s+([^\s]+)', line)
+    m = re.search('((?:[\w\d]{,2}:?){,6})\s+([^\s]+)', line)
     if m:
         macMap[m.group(1)] = m.group(2)
 
